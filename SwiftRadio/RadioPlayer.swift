@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Instabug
 
 //*****************************************************************
 // RadioPlayerDelegate: Sends FRadioPlayer and Station/Track events
@@ -73,6 +74,7 @@ class RadioPlayer {
         guard let station = station else { track = nil; return }
         updateTrackMetadata(artistName: station.desc, trackName: station.name)
         resetArtwork(with: station)
+        IBGLog.logInfo("Reset the track metadata and artwork to use the current station infos")
     }
     
     // Reset the track Artwork to current station image

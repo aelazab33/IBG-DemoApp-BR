@@ -8,6 +8,7 @@
 
 import UIKit
 import Instabug
+import Gleap
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,10 +17,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     weak var stationsViewController: StationsViewController?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        Instabug.start(withToken: "d973942f56ac5b73e0a3516a22d7ce5b", invocationEvents: [.shake, .floatingButton])
+//        Gleap.initialize(withToken: "1c3RgGzoNTEw6ouxxyPNHhzOS6JQKSR6")
+        Instabug.start(withToken: "d973942f56ac5b73e0a3516a22d7ce5b", invocationEvents: [.shake, .floatingButton, .screenshot])
         BugReporting.floatingButtonTopOffset = 550
         BugReporting.bugReportingOptions = [.emailFieldHidden]
-        // MPNowPlayingInfoCenter
+        IBGLog.logInfo("Email field hidden")
+        //MPNowPlayingInfoCenter
         UIApplication.shared.beginReceivingRemoteControlEvents()
         
         // Make status bar white

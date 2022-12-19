@@ -62,6 +62,7 @@
 		CAA8FDB52000614600050F77 /* RadioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA8FDB42000614600050F77 /* RadioPlayer.swift */; };
 		CF72ACE721F7155200461EED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF72ACE621F714D000461EED /* Main.storyboard */; };
 		E39A89F825ADA822009295FF /* SongInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39A89F725ADA822009295FF /* SongInfo.swift */; };
+		F408962A28752C1100A9D0E9 /* Gleap in Frameworks */ = {isa = PBXBuildFile; productRef = F408962928752C1100A9D0E9 /* Gleap */; };
 		F4C37D732829E08000E336FC /* Instabug in Frameworks */ = {isa = PBXBuildFile; productRef = F4C37D722829E08000E336FC /* Instabug */; };
 /* End PBXBuildFile section */
 
@@ -152,6 +153,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F408962A28752C1100A9D0E9 /* Gleap in Frameworks */,
 				F4C37D732829E08000E336FC /* Instabug in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -367,6 +369,7 @@
 			name = SwiftRadio;
 			packageProductDependencies = (
 				F4C37D722829E08000E336FC /* Instabug */,
+				F408962928752C1100A9D0E9 /* Gleap */,
 			);
 			productName = RadioPro;
 			productReference = 9409E1161ABF6FEA00312E2B /* SwiftRadio.app */;
@@ -411,6 +414,7 @@
 			mainGroup = 9409E10D1ABF6FE900312E2B;
 			packageReferences = (
 				F4C37D712829E08000E336FC /* XCRemoteSwiftPackageReference "Instabug-SP" */,
+				F408962828752C1100A9D0E9 /* XCRemoteSwiftPackageReference "Gleap-iOS-SDK" */,
 			);
 			productRefGroup = 9409E1171ABF6FEA00312E2B /* Products */;
 			projectDirPath = "";
@@ -755,6 +759,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		F408962828752C1100A9D0E9 /* XCRemoteSwiftPackageReference "Gleap-iOS-SDK" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/GleapSDK/Gleap-iOS-SDK";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 		F4C37D712829E08000E336FC /* XCRemoteSwiftPackageReference "Instabug-SP" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Instabug/Instabug-SP";
@@ -766,6 +778,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		F408962928752C1100A9D0E9 /* Gleap */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F408962828752C1100A9D0E9 /* XCRemoteSwiftPackageReference "Gleap-iOS-SDK" */;
+			productName = Gleap;
+		};
 		F4C37D722829E08000E336FC /* Instabug */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F4C37D712829E08000E336FC /* XCRemoteSwiftPackageReference "Instabug-SP" */;
