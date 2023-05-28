@@ -9,6 +9,7 @@
 import UIKit
 import Instabug
 import Gleap
+import Shake
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,13 +18,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     weak var stationsViewController: StationsViewController?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-//        Gleap.initialize(withToken: "1c3RgGzoNTEw6ouxxyPNHhzOS6JQKSR6")
-        Instabug.start(withToken: "d973942f56ac5b73e0a3516a22d7ce5b", invocationEvents: [.shake, .floatingButton, .screenshot])
-        BugReporting.floatingButtonTopOffset = 550
-        BugReporting.bugReportingOptions = [.emailFieldHidden]
-        IBGLog.logInfo("Email field hidden")
-        //MPNowPlayingInfoCenter
-        UIApplication.shared.beginReceivingRemoteControlEvents()
+        Gleap.initialize(withToken: "LQofnFGZWMx4NWmuDgW1r3KjdavhyzSn")
+//        Instabug.start(withToken: "d973942f56ac5b73e0a3516a22d7ce5b", invocationEvents: [.shake, .floatingButton, .screenshot])
+////        kIBGInvocationTitleStringName
+//        BugReporting.floatingButtonTopOffset = 550
+//        BugReporting.bugReportingOptions = [.emailFieldHidden]
+//        IBGLog.logInfo("Email field hidden")
+//        //MPNowPlayingInfoCenter
+//        Shake.configuration.isInvokedByShakeDeviceEvent = true
+//        Shake.configuration.isFloatingReportButtonShown = true
+//        Shake.configuration.isInvokedByScreenshot = true
+//        Shake.configuration.isInvokedByRightEdgePan = true
+//        Shake.start(clientId: "DphaIMBjJd4xAEr34XHVzerqN4hIP8p1EoRVfgst", clientSecret: "EZkFQ7paLzaZF7cLoDjve4DxTDyjhCeq7x1NTkN8ydLmurFcaK4RHMW")
+//        UIApplication.shared.beginReceivingRemoteControlEvents()
         
         // Make status bar white
         UINavigationBar.appearance().barStyle = .black
